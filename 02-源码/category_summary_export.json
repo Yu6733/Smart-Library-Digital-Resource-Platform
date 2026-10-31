@@ -1,0 +1,32 @@
+[
+  {
+    "total_stock": 50,
+    "book_count": 5,
+    "avg_price": 95.6
+  },
+  {
+    "total_stock": 72,
+    "book_count": 5,
+    "avg_price": 59.0
+  },
+  {
+    "total_stock": 122,
+    "book_count": 6,
+    "avg_price": 40.666666666666664
+  },
+  {
+    "total_stock": 181,
+    "book_count": 12,
+    "avg_price": 47.01666666666667
+  },
+  {
+    "total_stock": 64,
+    "book_count": 7,
+    "avg_price": 90.85714285714286
+  },
+  {
+    "total_stock": 172,
+    "book_count": 15,
+    "avg_price": 89.53333333333333
+  }
+]

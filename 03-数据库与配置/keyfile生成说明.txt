@@ -1,0 +1,17 @@
+keyFile 说明（公开版）
+====================
+
+keyFile 是 MongoDB 副本集与分片集群内部节点之间认证用的共享密钥：
+集群里每个 mongod / mongos 都必须用 --keyFile 指向同一个文件，否则节点互相连不上。
+
+公开版仓库不含这个文件（它等同于集群口令），请自己生成一份：
+
+  PowerShell（本目录）：
+      .\gen_keyfile.ps1
+  或手工：
+      openssl rand -base64 756 > keyfile.txt
+
+生成后：
+  1. 把路径填进启动命令：--keyFile .\deploy\keyfile.txt（见《启动与部署说明.md》第 2、3 节）；
+  2. 三个副本集节点、config 副本集、两个分片、mongos 全部使用同一个文件；
+  3. 该文件不要提交到任何仓库（原版交付包里的 keyfile.txt 属实验环境凭据）。

@@ -1,0 +1,15 @@
+{
+  "_comment": "统一连接配置：程序不再硬编码连接串，改为读取本文件；可用环境变量 MONGODB_URI / MONGODB_DB / MONGODB_SHARD_URI / MONGODB_SHARD_ADMIN_URI / MONGODB_STANDALONE_URI / MONGODB_REPL_MEMBERS / MONGODB_ADMIN_URI 覆盖；repl_set / MONGODB_REPL_SET 指定副本集名；【公开版】四条连接串里的密码已替换为占位符 CHANGE_ME，请先按 03-数据库与配置/启动与部署说明.md 第 2 节创建账号，再把本文件的 CHANGE_ME 换成你自己设置的密码",
+  "uri": "mongodb://libWriter:CHANGE_ME@127.0.0.1:27017,127.0.0.1:27018,127.0.0.1:27019/?replicaSet=rs0&authSource=library",
+  "db": "library",
+  "admin_uri": "mongodb://libAdmin:CHANGE_ME@127.0.0.1:27017,127.0.0.1:27018,127.0.0.1:27019/?replicaSet=rs0&authSource=admin",
+  "standalone_uri": "mongodb://127.0.0.1:27017/?directConnection=true",
+  "shard_uri": "mongodb://libApp:CHANGE_ME@127.0.0.1:27217/library?authSource=library",
+  "shard_admin_uri": "mongodb://shardAdmin:CHANGE_ME@127.0.0.1:27217/?authSource=admin",
+  "repl_members": [
+    "127.0.0.1:27017",
+    "127.0.0.1:27018",
+    "127.0.0.1:27019"
+  ],
+  "repl_set": "rs0"
+}
